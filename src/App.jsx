@@ -1,17 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.scss";
-import Header from "./Header"
 import Footer from "./Footer";
+import Header from "./Header";
 
 const App = () => (
   <div className="text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="my-10">
-      Home page Content
+    <div className="text-center">
+      <img
+        src="https://i.ibb.co/CVYFJBM/avatar.webp"
+        className="rounded-full w-32 mb-4 mx-auto"
+        alt="Avatar"
+      />
+      <h5 className="text-xl font-medium leading-tight mb-2">Hola Mundo</h5>
+      <p className="text-gray-500">Harolt kruchinsky</p>
     </div>
-    <Footer />
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(<App />);
+
