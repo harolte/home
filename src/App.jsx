@@ -1,3 +1,4 @@
+// App.jsx en la aplicación Home
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
@@ -5,27 +6,19 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const App = () => {
-  const [loadTaller, cargarContenidoTaller] = useState(false);
+  const [loadTaller, setLoadTaller] = useState(false);
 
-  const tallerContenido = () => {
-    cargarContenidoTaller(true);
+  const handleLoadTaller = () => {
+    setLoadTaller(true);
   };
 
   return (
     <div className="text-3xl mx-auto max-w-6xl">
-      <div className="text-center">
-        <Header boton={tallerContenido} />
-        <img
-          src="https://i.ibb.co/CVYFJBM/avatar.webp"
-          className="rounded-full w-32 mb-4 mx-auto"
-          alt="Avatar"
-        />
-        <h5 className="text-xl font-medium leading-tight mb-2">Hola Mundo</h5>
-        <p className="text-gray-500">Harolt Kruchinsky</p>
-
-        {loadTaller && (
+      <Header />
+      {loadTaller ? (
+        <div>
           <iframe
-            src="https://main.d1os68stgyteh0.amplifyapp.com/"
+            src="https://main.d1grj6p2gqblae.amplifyapp.com/"
             title="Taller"
             style={{
               width: '100%',
@@ -34,10 +27,31 @@ const App = () => {
               marginTop: '20px',
             }}
           />
-        )}
-
-        <Footer />
-      </div>
+          <button
+            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+            onClick={() => setLoadTaller(false)}
+          >
+            Regresar a Home
+          </button>
+        </div>
+      ) : (
+        <div className="text-center">
+          <img
+            src="https://i.ibb.co/CVYFJBM/avatar.webp"
+            className="rounded-full w-32 mb-4 mx-auto"
+            alt="Avatar"
+          />
+          <h5 className="text-xl font-medium leading-tight mb-2">Hola Mundo</h5>
+          <p className="text-gray-500">Harolt Kruchinsky</p>
+          <button
+            className="mt-4 bg-green-500 text-white px-4 py-2 rounded"
+            onClick={handleLoadTaller}
+          >
+            Ir a Taller
+          </button>
+        </div>
+      )}
+      <Footer />
     </div>
   );
 };

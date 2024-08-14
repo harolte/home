@@ -1,15 +1,23 @@
 import React from "react";
 
-export default function Header({ boton }) {
+const Header = () => {
+  const handleNavigateToTaller = () => {
+    window.location.href = 'https://main.d1grj6p2gqblae.amplifyapp.com/'; 
+  };
+
   return (
     <div className="p-5 bg-blue-500 text-white text-3xl font-bold">
-      Micro Frontend Header
+      <div>
+        Micro Frontend Header
+      </div>
       <button
-        className="ml-4 bg-white text-blue-500 px-4 py-2 rounded"
-        onClick={boton}
+        className="mt-2 bg-green-500 text-white px-4 py-2 rounded"
+        onClick={handleNavigateToTaller}
       >
-        Siguiente
+        Ir a Taller
       </button>
     </div>
   );
-}
+};
+
+export default Header;
