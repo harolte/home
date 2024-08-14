@@ -20,7 +20,7 @@ const App = () => {
         <div>
           <iframe
           //cambiar aqui el nuevo
-            src="https://main.dhb3edeemgmib.amplifyapp.com/"
+            src="https://main.d2bcam6qlunye8.amplifyapp.com/"
             title="Taller"
             style={{
               width: '100%',
