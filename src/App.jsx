@@ -12,12 +12,14 @@ const App = () => {
   };
 
   return (
-    <div className="text-3xl mx-auto max-w-6xl">
+    
+   <>
+   <div className="text-3xl mx-auto max-w-6xl">
       <Header />
       {loadTaller ? (
         <div>
           <iframe
-            src="https://main.d1grj6p2gqblae.amplifyapp.com/"
+            src="https://main.d1os68stgyteh0.amplifyapp.com/"
             title="Taller"
             style={{
               width: '100%',
@@ -25,6 +27,7 @@ const App = () => {
               border: 'none',
               marginTop: '20px',
             }}
+            
           />
           <button
             className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
@@ -52,6 +55,7 @@ const App = () => {
       )}
       <Footer />
     </div>
+    </>
   );
 };
 
