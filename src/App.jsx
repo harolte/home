@@ -19,7 +19,8 @@ const App = () => {
       {loadTaller ? (
         <div>
           <iframe
-            src="https://main.d1os68stgyteh0.amplifyapp.com/"
+          //cambiar aqui el nuevo
+            src="https://main.d279we5xa4psmh.amplifyapp.com/"
             title="Taller"
             style={{
               width: '100%',
