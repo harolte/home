@@ -1,4 +1,3 @@
-// App.jsx en la aplicación Home
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
